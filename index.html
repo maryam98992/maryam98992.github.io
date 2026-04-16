@@ -3,179 +3,237 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Maryam Ali | Game Producer Portfolio</title>
+<title>Maryam Ali | Game Producer</title>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #0f172a;
-        color: #e2e8f0;
-        line-height: 1.6;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
 
-    header {
-        background: linear-gradient(135deg, #1e3a8a, #0f172a);
-        padding: 60px 20px;
-        text-align: center;
-    }
+body {
+    background: #050816;
+    color: white;
+    overflow-x: hidden;
+}
 
-    header h1 {
-        font-size: 40px;
-        margin: 0;
-    }
+/* BACKGROUND EFFECT */
+.bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top, #1b2cff33, transparent 60%),
+                radial-gradient(circle at bottom, #ff00ff22, transparent 60%);
+    animation: moveBG 10s infinite alternate;
+    z-index: -1;
+}
 
-    header p {
-        font-size: 18px;
-        color: #93c5fd;
-    }
+@keyframes moveBG {
+    from { transform: translateY(0px); }
+    to { transform: translateY(20px); }
+}
 
-    .container {
-        max-width: 1000px;
-        margin: auto;
-        padding: 40px 20px;
-    }
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
-    h2 {
-        border-left: 4px solid #3b82f6;
-        padding-left: 10px;
-        margin-top: 40px;
-        color: #60a5fa;
-    }
+.hero h1 {
+    font-size: 50px;
+    color: #00f7ff;
+    text-shadow: 0 0 20px #00f7ff;
+}
 
-    .card {
-        background: #1e293b;
-        padding: 20px;
-        margin: 15px 0;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    }
+.hero p {
+    margin-top: 10px;
+    color: #aaa;
+}
 
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 15px;
-    }
+/* BUTTONS */
+.menu {
+    margin-top: 30px;
+}
 
-    .tag {
-        display: inline-block;
-        background: #2563eb;
-        padding: 5px 10px;
-        border-radius: 5px;
-        margin: 3px;
-        font-size: 12px;
-    }
+.menu button {
+    background: transparent;
+    border: 1px solid #00f7ff;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
-    footer {
-        text-align: center;
-        padding: 20px;
-        color: #94a3b8;
-        font-size: 14px;
-    }
+.menu button:hover {
+    background: #00f7ff;
+    color: black;
+    transform: scale(1.1);
+}
 
-    a {
-        color: #60a5fa;
-        text-decoration: none;
-    }
+/* SECTIONS */
+section {
+    padding: 80px 10%;
+}
+
+h2 {
+    color: #00f7ff;
+    margin-bottom: 20px;
+}
+
+/* PROJECTS */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #0b1025;
+    border: 1px solid #1b2cff55;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #00f7ff44;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* VIDEO */
+iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+/* SKILLS */
+.skill {
+    margin: 10px 0;
+}
+
+.bar {
+    height: 8px;
+    background: #111a3a;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.fill {
+    height: 8px;
+    background: #00f7ff;
+}
+
+/* CONTACT */
+.contact {
+    text-align: center;
+    padding: 40px;
+    color: #aaa;
+}
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Maryam Ali</h1>
-    <p>Game Producer & Developer | Unity Specialist | Project Manager</p>
-    <p>📍 Chishtian, Punjab | 📧 MaryamAli.dev@gmail.com | 📞 +92 303 0869899</p>
-</header>
+<div class="bg"></div>
 
-<div class="container">
+<!-- HERO -->
+<div class="hero">
+    <h1>MARYAM ALI</h1>
+    <p>Game Producer • Unity Developer • System Designer</p>
 
-    <h2>Objective</h2>
-    <div class="card">
-        To pursue a Master’s in Computer Science and grow as a professional Game Producer,
-        combining creativity, leadership, and technical expertise to build impactful interactive experiences.
+    <div class="menu">
+        <button onclick="scrollToSection('projects')">Projects</button>
+        <button onclick="scrollToSection('skills')">Skills</button>
+        <button onclick="scrollToSection('contact')">Contact</button>
     </div>
-
-    <h2>Game Production Experience</h2>
-
-    <div class="card">
-        <b>Game Producer & Developer — Feative Studios</b> (2025 – Present)
-        <ul>
-            <li>Leading production of <b>Iron Hold</b> (tower defense strategy game)</li>
-            <li>Managing gameplay systems, AI, resource mechanics & progression</li>
-            <li>Coordinating artists, designers, and developers</li>
-            <li>Using Jira, ClickUp, Miro for project execution</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <b>Business Development & Marketing Roles</b>
-        <ul>
-            <li>Increased social media reach by 500% in 3 months</li>
-            <li>Led client relations and growth strategy</li>
-        </ul>
-    </div>
-
-    <h2>Education</h2>
-    <div class="card">
-        <b>BS Computer Science</b><br/>
-        Islamia University of Bahawalpur (IUB)<br/>
-        CGPA: 3.72/4.0 (2021 – 2025)
-    </div>
-
-    <h2>Skills</h2>
-    <div class="card">
-        <div class="tag">C#</div>
-        <div class="tag">C++</div>
-        <div class="tag">Python</div>
-        <div class="tag">Java</div>
-        <div class="tag">Unity 2D/3D</div>
-        <div class="tag">Game Production</div>
-        <div class="tag">Project Management</div>
-        <div class="tag">Jira</div>
-        <div class="tag">ClickUp</div>
-        <div class="tag">Team Leadership</div>
-        <div class="tag">Marketing Strategy</div>
-    </div>
-
-    <h2>Projects</h2>
-
-    <div class="card">
-        <b>Plane Adventure: Fly Challenge</b>
-        <p>Endless flying mobile game with fuel, rings, and leaderboard system.</p>
-    </div>
-
-    <div class="card">
-        <b>Adventure Capitalist</b>
-        <p>Idle tycoon game with economy, upgrades, and progression systems.</p>
-    </div>
-
-    <div class="card">
-        <b>Cash Drop</b>
-        <p>2D arcade game with increasing difficulty and smooth performance optimization.</p>
-    </div>
-
-    <div class="card">
-        <b>Car Racing Multiplayer</b>
-        <p>3D real-time multiplayer racing game with leaderboards and physics tuning.</p>
-    </div>
-
-    <div class="card">
-        <b>Iron Hold (Ongoing)</b>
-        <p>Tower defense strategy game focusing on tactical gameplay and balancing.</p>
-    </div>
-
-    <h2>Contact</h2>
-    <div class="card">
-        📧 <a href="mailto:MaryamAli.dev@gmail.com">MaryamAli.dev@gmail.com</a><br/>
-        📍 Chishtian, Punjab, Pakistan
-    </div>
-
 </div>
 
-<footer>
-    © 2026 Maryam Ali | Game Producer Portfolio
-</footer>
+<!-- PROJECTS -->
+<section id="projects">
+    <h2>🎮 Projects</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <img src="https://via.placeholder.com/400x200" />
+            <h3>Plane Adventure</h3>
+            <p>Endless flying survival game with fuel mechanics.</p>
+        </div>
+
+        <div class="card">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+            <h3>Car Racing Multiplayer</h3>
+            <p>Real-time multiplayer racing system.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/400x200" />
+            <h3>Adventure Capitalist</h3>
+            <p>Idle tycoon economy simulation game.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/400x200" />
+            <h3>Iron Hold</h3>
+            <p>Tower defense strategy game (in development).</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <h2>⚡ Skills</h2>
+
+    <div class="skill">Unity
+        <div class="bar"><div class="fill" style="width:90%"></div></div>
+    </div>
+
+    <div class="skill">Game Production
+        <div class="bar"><div class="fill" style="width:95%"></div></div>
+    </div>
+
+    <div class="skill">C#
+        <div class="bar"><div class="fill" style="width:85%"></div></div>
+    </div>
+
+    <div class="skill">Project Management
+        <div class="bar"><div class="fill" style="width:88%"></div></div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>📩 Contact</h2>
+    <div class="contact">
+        Email: MaryamAli.dev@gmail.com <br/>
+        Location: Pakistan <br/>
+        Game Production • Unity Development • Leadership
+    </div>
+</section>
+
+<script>
+function scrollToSection(id){
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+}
+</script>
 
 </body>
 </html>
